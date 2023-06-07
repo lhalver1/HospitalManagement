@@ -4,8 +4,10 @@ import { HospitalPageComponent } from './pages/hospital-page/hospital-page.compo
 import { SpecialtyPageComponent } from './pages/specialty-page/specialty-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/hospital', pathMatch: 'full' },
   { path: 'hospital', component: HospitalPageComponent },
   { path: 'specialty', component: SpecialtyPageComponent },
+  { path: '**', redirectTo: '/hospital', pathMatch: 'full' }
 ];
 
 @NgModule({
