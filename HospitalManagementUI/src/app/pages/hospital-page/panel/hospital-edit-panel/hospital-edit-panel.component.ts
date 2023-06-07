@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Specialty } from 'src/app/models/specialty.model';
 import { HospitalService } from 'src/app/services/hospital.service';
 
 @Component({
   selector: 'hospital-edit-panel',
-  templateUrl: './hospital-edit-panel.component.html'
+  templateUrl: './hospital-edit-panel.component.html',
+  styleUrls: ['./hospital-edit-panel.component.css']
 })
 export class HospitalEditPanelComponent {
     @Input()
@@ -18,7 +19,7 @@ export class HospitalEditPanelComponent {
     constructor(private hospitalService: HospitalService, public activeModal: NgbActiveModal) { 
        this.form = new FormGroup({
                 id: new FormControl(''),
-                name: new FormControl(''),
+                name: new FormControl('', Validators.required),
                 address: new FormControl(''),
                 phone: new FormControl(''),
                 manager: new FormControl(''),
@@ -41,6 +42,10 @@ export class HospitalEditPanelComponent {
             manager: this.hospital.manager,
             specialty_ID: this.hospital.specialty_ID
         })
+    }
+
+    formValid() {
+        return this.form.get('name')?.invalid;
     }
 
     delete() {

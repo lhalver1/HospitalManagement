@@ -103,9 +103,9 @@ export class HospitalService {
             address: '',
             phone: '',
             manager: '',
-            specialty_ID: 0,
+            specialty_ID: 1,
             specialty: {
-                id: 0,
+                id: 1,
                 name: '',
                 hospital: []
             }

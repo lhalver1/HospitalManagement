@@ -11,6 +11,8 @@ import { HospitalTablePanelComponent } from './pages/hospital-page/panel/hospita
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HospitalEditPanelComponent } from './pages/hospital-page/panel/hospital-edit-panel/hospital-edit-panel.component';
+import { SpecialtyTablePanelComponent } from './pages/specialty-page/panel/specialty-table-panel/specialty-table-panel.component';
+import { SpecialtyService } from './services/specialty.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { HospitalEditPanelComponent } from './pages/hospital-page/panel/hospital
     HospitalPageComponent,
     HospitalTablePanelComponent,
     HospitalEditPanelComponent,
-    SpecialtyPageComponent
+    SpecialtyPageComponent,
+    SpecialtyTablePanelComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { HospitalEditPanelComponent } from './pages/hospital-page/panel/hospital
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [HospitalService],
+  providers: [HospitalService, SpecialtyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

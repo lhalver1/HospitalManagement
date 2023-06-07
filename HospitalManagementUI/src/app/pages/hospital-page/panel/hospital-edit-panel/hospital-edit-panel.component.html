@@ -1,5 +1,5 @@
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modal-title">Edit Hospital</h1>
+          <h1 class="modal-title fs-5" id="modal-title">{{ hospital.id == -1 ? 'Create' : 'Edit' }} Hospital</h1>
           <button type="button" class="btn-close" aria-label="Close" (click)="cancel()"></button>
         </div>
         <div class="modal-body">
@@ -34,8 +34,12 @@
               </div>
             </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" style="float: left;" (click)="delete()">Delete</button>
-          <button type="button" class="btn btn-secondary" (click)="cancel()">Close</button>
-          <button type="button" class="btn btn-primary" (click)="proceed()">Save changes</button>
+        <div class="modal-footer" style="justify-content: space-between;">
+          <div>
+            <button type="button" *ngIf="hospital.id != -1" class="btn btn-danger" style="float: left;" (click)="delete()">Delete</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10px;" [disabled]="formValid()" (click)="proceed()">{{ hospital.id == -1 ? 'Create' : 'Save' }}</button>
+          </div>
         </div>
