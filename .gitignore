@@ -1,3 +1,44 @@
 HospitalManagementServices/.vs/
 HospitalManagementServices/bin/
 HospitalManagementServices/obj/
+
+# Compiled output
+HospitalManagementUI/dist
+HospitalManagementUI/tmp
+HospitalManagementUI/out-tsc
+HospitalManagementUI/bazel-out
+
+# Node
+HospitalManagementUI/node_modules
+HospitalManagementUI/npm-debug.log
+HospitalManagementUI/yarn-error.log
+
+# IDEs and editors
+HospitalManagementUI/.idea/
+HospitalManagementUI/.project
+HospitalManagementUI/.classpath
+HospitalManagementUI/.c9/
+HospitalManagementUI/*.launch
+HospitalManagementUI/.settings/
+HospitalManagementUI/*.sublime-workspace
+
+# Visual Studio Code
+HospitalManagementUI/.vscode/*
+HospitalManagementUI/!.vscode/settings.json
+HospitalManagementUI/!.vscode/tasks.json
+HospitalManagementUI/!.vscode/launch.json
+HospitalManagementUI/!.vscode/extensions.json
+HospitalManagementUI/.history/*
+
+# Miscellaneous
+HospitalManagementUI/.angular/cache
+HospitalManagementUI/.sass-cache/
+HospitalManagementUI/connect.lock
+HospitalManagementUI/coverage
+HospitalManagementUI/libpeerconnection.log
+HospitalManagementUI/testem.log
+HospitalManagementUI/typings
+
+# System files
+HospitalManagementUI/.DS_Store
+HospitalManagementUI/Thumbs.db

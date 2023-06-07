@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace HospitalManagementServices.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class SpecialtyController : ControllerBase
     {
 
